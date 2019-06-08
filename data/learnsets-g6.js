@@ -8939,6 +8939,7 @@ let BattleLearnsets = {
 		psychup: ["7M", "6M", "5M", "4M"],
 		rage: ["7V"],
 		raindance: ["7M", "7V", "6M", "5M", "4M", "3M", "3S0"],
+		recover: ["7L1"],
 		recycle: ["7T", "6T", "5T", "4M"],
 		reflect: ["7M", "7V", "6M", "5M", "4M", "3M"],
 		refresh: ["3S0"],

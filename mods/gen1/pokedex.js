@@ -1134,7 +1134,7 @@ exports.BattlePokedex = {
 	magneton: {
 		num: 82,
 		species: "Magneton",
-		types: ["Electric","Rock"],
+		types: ["Electric", "Rock"],
 		gender: "N",
 		baseStats: {hp: 70, atk: 60, def: 95, spa: 120, spd: 120, spe: 70},
 		abilities: {},
@@ -1897,7 +1897,7 @@ exports.BattlePokedex = {
 		species: "Omastar",
 		types: ["Rock", "Water"],
 		gender: "N",
-		baseStats: {hp: 70, atk: 60, def: 125, spa: 115, spd: 115, spe: 55},
+		baseStats: {hp: 60, atk: 60, def: 105, spa: 100, spd: 100, spe: 55},
 		abilities: {},
 		heightm: 1,
 		weightkg: 35,
