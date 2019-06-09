@@ -15961,7 +15961,7 @@ let BattleMovedex = {
 			this.add('-nothing');
 		},
 		secondary: false,
-		target: "self",
+		target: "normal",
 		type: "Flying",
 		zMoveBoost: {atk: 3},
 		contestType: "Cute",
