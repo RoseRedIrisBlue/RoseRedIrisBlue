@@ -1313,7 +1313,7 @@ exports.BattlePokedex = {
 		species: "Onix",
 		types: ["Rock", "Ground"],
 		gender: "N",
-		baseStats: {hp: 75, atk: 100, def: 160, spa: 40, spd: 40, spe: 70},
+		baseStats: {hp: 65, atk: 85, def: 160, spa: 40, spd: 40, spe: 70},
 		abilities: {},
 		heightm: 8.8,
 		weightkg: 210,
