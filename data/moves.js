@@ -15947,16 +15947,20 @@ let BattleMovedex = {
 	},
 	"splash": {
 		num: 150,
-		accuracy: 90,
-		basePower: 90,
+		accuracy: 100,
+		basePower: 60,
 		category: "Physical",
-		desc: "No additional effect.",
-		shortDesc: "No additional effect.",
+		desc: "30% chance to paralyze.",
+		shortDesc: "30% chance to paralyze.",
 		id: "splash",
 		name: "Splash",
 		pp: 10,
 		priority: 0,
 		flags: {gravity: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		onTryHit: function (target, source) {
 			this.add('-nothing');
 		},

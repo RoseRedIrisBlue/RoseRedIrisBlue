@@ -800,18 +800,22 @@ let BattleMovedex = {
 		heal: null,
 		onHit: function (target) {
 			// Fail when health is 255 or 511 less than max
-			if (target.hp === (target.maxhp - 255) || target.hp === (target.maxhp - 511) || target.hp === target.maxhp) {
-				return false;
-			}
+			//if (target.hp === (target.maxhp - 255) || target.hp === (target.maxhp - 511) || target.hp === target.maxhp) {
+				//return false;
+			//}
 			this.heal(Math.floor(target.maxhp / 2), target, target);
 		},
 	},
 	splash: {
 		inherit: true,
-		basePower: 100,
-		accuracy: 90,
+		basePower: 60,
+		accuracy: 100,
 		category: "Physical",
 		pp: 10,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		type: "Flying",
 	},
 	sludge: {
