@@ -504,7 +504,6 @@ exports.BattlePokedex = {
 		species: "Clefable",
 		types: ["Normal"],
 		gender: "N",
-		inherit: false,
 		baseStats: {hp: 95, atk: 70, def: 73, spa: 85, spd: 95, spe: 60},
 		abilities: {},
 		heightm: 1.3,
