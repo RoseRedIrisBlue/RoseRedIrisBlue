@@ -1,6 +1,7 @@
 'use strict';
 
-exports.BattlePokedex = {
+/**@type {{[k: string]: TemplateData}} */
+let BattlePokedex = {
 	missingno: {
 		num: 0,
 		species: "Missingno.",
@@ -504,7 +505,7 @@ exports.BattlePokedex = {
 		species: "Clefable",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: {hp: 95, atk: 70, def: 73, spa: 85, spd: 95, spe: 60},
+		baseStats: {hp: 95, atk: 70, def: 73, spa: 95, spd: 95, spe: 60},
 		abilities: {},
 		heightm: 1.3,
 		weightkg: 40,
@@ -1675,7 +1676,7 @@ exports.BattlePokedex = {
 		species: "Mr. Mime",
 		types: ["Psychic", "Electric"],
 		gender: "N",
-		baseStats: {hp: 40, atk: 45, def: 65, spa: 100, spd: 110, spe: 105},
+		baseStats: {hp: 40, atk: 45, def: 65, spa: 110, spd: 110, spe: 105},
 		abilities: {},
 		heightm: 1.3,
 		weightkg: 54.5,
@@ -2060,3 +2061,5 @@ exports.BattlePokedex = {
 		eggGroups: ["Undiscovered"],
 	},
 };
+
+exports.BattlePokedex = BattlePokedex;

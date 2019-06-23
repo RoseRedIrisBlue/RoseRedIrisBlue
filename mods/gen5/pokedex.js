@@ -11,7 +11,7 @@ exports.BattlePokedex = {
 	},
 	pidgeot: {
 		inherit: true,
-		baseStats: {hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 91},
+		baseStats: {hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101},
 	},
 	pikachu: {
 		inherit: true,
@@ -33,10 +33,13 @@ exports.BattlePokedex = {
 		inherit: true,
 		types: ["Normal"],
 	},
-	clefable: {
+	magneton: {
 		inherit: true,
-		types: ["Normal"],
-		baseStats: {hp: 95, atk: 70, def: 73, spa: 85, spd: 90, spe: 60},
+		types: ["Electric", "Rock"],
+	},
+	mrmime: {
+		inherit: true,
+		types: ["Psychic", "Electric"],
 	},
 	jigglypuff: {
 		inherit: true,
@@ -71,7 +74,7 @@ exports.BattlePokedex = {
 	},
 	mrmime: {
 		inherit: true,
-		types: ["Psychic"],
+		types: ["Psychic", "Electric"],
 	},
 	articuno: {
 		inherit: true,
