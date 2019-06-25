@@ -1193,6 +1193,7 @@ let BattleLearnsets = {
 		sandattack: ["7L5", "7L1", "7V", "6L1", "5L1", "4L1", "3L1"],
 		secretpower: ["6M", "4M", "3M"],
 		skyattack: ["7T", "7V", "6T", "5T", "5S0", "4T", "3T"],
+		sing: ["7V"],
 		sleeptalk: ["7M", "7V", "6M", "5T", "4M", "3T"],
 		snore: ["7T", "7V", "6T", "5T", "4T", "3T"],
 		steelwing: ["7M", "7V", "6M", "4M", "3M"],

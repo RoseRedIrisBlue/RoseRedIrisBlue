@@ -666,6 +666,7 @@ exports.BattleLearnsets = {
 		return: ["2M"],
 		sandattack: ["1L1", "1L5", "2L1", "2L5"],
 		skyattack: ["1M"],
+		sing: ["1M"],
 		sleeptalk: ["2M"],
 		snore: ["2M"],
 		steelwing: ["2M"],

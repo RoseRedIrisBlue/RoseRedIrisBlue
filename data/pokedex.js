@@ -1805,7 +1805,7 @@ exports.BattlePokedex = {
 		species: "Ditto",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: {hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48},
+		baseStats: {hp: 108, atk: 58, def: 58, spa: 58, spd: 58, spe: 128},
 		abilities: {},
 		heightm: 0.3,
 		weightkg: 4,
