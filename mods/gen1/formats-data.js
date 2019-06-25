@@ -785,7 +785,7 @@ let BattleFormatsData = {
 		essentialMove: "amnesia",
 		exclusiveMoves: ["psychic", "psychic"],
 		comboMoves: ["rest", "barrier"],
-		tier: "Uber",
+		tier: "OU",
 	},
 	mew: {
 		randomBattleMoves: ["thunderwave", "thunderbolt", "blizzard", "earthquake"],
@@ -796,7 +796,7 @@ let BattleFormatsData = {
 			{"generation": 1, "level": 5, "moves": ["pound"]},
 		],
 		eventOnly: true,
-		tier: "Uber",
+		tier: "OU",
 	},
 };
 
