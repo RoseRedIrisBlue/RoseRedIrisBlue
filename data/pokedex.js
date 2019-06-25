@@ -2041,7 +2041,7 @@ exports.BattlePokedex = {
 		species: "Mewtwo",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: {hp: 66, atk: 110, def: 60, spa: 134, spd: 134, spe: 90},
+		baseStats: {hp: 66, atk: 110, def: 60, spa: 144, spd: 144, spe: 90},
 		abilities: {},
 		heightm: 2,
 		weightkg: 122,
