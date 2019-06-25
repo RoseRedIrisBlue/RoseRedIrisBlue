@@ -16775,7 +16775,7 @@ let BattleLearnsets = {
 	}},
 	mewtwo: {learnset: {
 		aerialace: ["7M", "6M", "5M", "4M", "3M"],
-		amnesia: ["7L79", "7V", "7V", "6L79", "5L50", "4L57", "4S1", "3L77"],
+		//amnesia: ["7L79", "7V", "7V", "6L79", "5L50", "4L57", "4S1", "3L77"],
 		aquatail: ["7T", "6T", "5T", "4T"],
 		aurasphere: ["7L70", "6L70", "6S5", "6S4", "5L93", "5S2", "4L100"],
 		avalanche: ["4M"],
@@ -16862,7 +16862,7 @@ let BattleLearnsets = {
 		psywave: ["7L1", "7V"],
 		rage: ["7V"],
 		raindance: ["7M", "7V", "6M", "5M", "4M", "3M"],
-		recover: ["7L50", "7V", "7S6", "7V", "6L50", "6S5", "6S4", "5L79", "4L86", "3L44", "3S0"],
+		//recover: ["7L50", "7V", "7S6", "7V", "6L50", "6S5", "6S4", "5L79", "4L86", "3L44", "3S0"],
 		recycle: ["7T", "6T", "5T", "4M"],
 		reflect: ["7M", "7V", "6M", "5M", "4M", "3M"],
 		rest: ["7M", "7V", "7V", "6M", "5M", "4M", "3M"],

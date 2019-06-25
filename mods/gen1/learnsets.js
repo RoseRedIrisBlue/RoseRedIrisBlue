@@ -7291,7 +7291,7 @@ exports.BattleLearnsets = {
 		zapcannon: ["2M"],
 	}},
 	mewtwo: {learnset: {
-		amnesia: ["1L81", "2L77"],
+		//amnesia: ["1L81", "2L77"],
 		barrier: ["1L63", "2L11"],
 		bide: ["1M"],
 		blizzard: ["1M", "2M"],
@@ -7334,7 +7334,7 @@ exports.BattleLearnsets = {
 		psywave: ["1M"],
 		rage: ["1M"],
 		raindance: ["2M"],
-		recover: ["1L70", "2L88"],
+		//recover: ["1L70", "2L88"],
 		reflect: ["1M"],
 		rest: ["1M", "2M"],
 		return: ["2M"],
