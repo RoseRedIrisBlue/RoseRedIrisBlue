@@ -3979,6 +3979,7 @@ exports.BattleLearnsets = {
 		zapcannon: ["2L53", "2M"],
 	}},
 	farfetchd: {learnset: {
+		razorleaf: ["1M"],
 		agility: ["1L31", "2L31", "2S0"],
 		attract: ["2M"],
 		batonpass: ["2S0"],
