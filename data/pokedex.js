@@ -1488,7 +1488,7 @@ exports.BattlePokedex = {
 		species: "Lickitung",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: {hp: 90, atk: 55, def: 75, spa: 60, spd: 60, spe: 30},
+		baseStats: {hp: 110, atk: 85, def: 85, spa: 75, spd: 75, spe: 50},
 		abilities: {},
 		heightm: 1.2,
 		weightkg: 65.5,
