@@ -283,7 +283,7 @@ exports.BattlePokedex = {
 		species: "Raticate",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: {hp: 55, atk: 81, def: 60, spa: 50, spd: 50, spe: 97},
+		baseStats: {hp: 70, atk: 91, def: 75, spa: 65, spd: 65, spe: 97},
 		abilities: {},
 		heightm: 0.7,
 		weightkg: 18.5,

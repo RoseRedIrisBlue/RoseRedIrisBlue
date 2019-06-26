@@ -2432,6 +2432,7 @@ exports.BattleLearnsets = {
 		zapcannon: ["2M"],
 	}},
 	persian: {learnset: {
+		hypnosis: ["1M"],
 		attract: ["2M"],
 		bide: ["1M"],
 		bite: ["1L1", "1L12", "2L1", "2L11"],
