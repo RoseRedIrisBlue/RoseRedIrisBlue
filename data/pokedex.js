@@ -557,9 +557,9 @@ exports.BattlePokedex = {
 	wigglytuff: {
 		num: 40,
 		species: "Wigglytuff",
-		types: ["Normal"],
+		types: ["Normal", "Psychic"],
 		gender: "N",
-		baseStats: {hp: 140, atk: 70, def: 45, spa: 50, spd: 50, spe: 45},
+		baseStats: {hp: 140, atk: 85, def: 65, spa: 70, spd: 70, spe: 45},
 		abilities: {},
 		heightm: 1,
 		weightkg: 12,
