@@ -1,6 +1,7 @@
 'use strict';
 
-exports.BattlePokedex = {
+/**@type {{[k: string]: TemplateData}} */
+let BattlePokedex = {
 	missingno: {
 		num: 0,
 		species: "Missingno.",
@@ -504,7 +505,7 @@ exports.BattlePokedex = {
 		species: "Clefable",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: {hp: 95, atk: 70, def: 73, spa: 85, spd: 85, spe: 60},
+		baseStats: {hp: 95, atk: 70, def: 73, spa: 95, spd: 95, spe: 60},
 		abilities: {},
 		heightm: 1.3,
 		weightkg: 40,
@@ -1134,7 +1135,7 @@ exports.BattlePokedex = {
 	magneton: {
 		num: 82,
 		species: "Magneton",
-		types: ["Electric","Rock"],
+		types: ["Electric", "Rock"],
 		gender: "N",
 		baseStats: {hp: 70, atk: 60, def: 95, spa: 120, spd: 120, spe: 70},
 		abilities: {},
@@ -1313,7 +1314,7 @@ exports.BattlePokedex = {
 		species: "Onix",
 		types: ["Rock", "Ground"],
 		gender: "N",
-		baseStats: {hp: 75, atk: 100, def: 160, spa: 40, spd: 40, spe: 70},
+		baseStats: {hp: 65, atk: 85, def: 160, spa: 40, spd: 40, spe: 70},
 		abilities: {},
 		heightm: 8.8,
 		weightkg: 210,
@@ -1447,7 +1448,7 @@ exports.BattlePokedex = {
 		species: "Marowak",
 		types: ["Ground"],
 		gender: "N",
-		baseStats: {hp: 60, atk: 180, def: 110, spa: 50, spd: 50, spe: 45},
+		baseStats: {hp: 80, atk: 180, def: 110, spa: 70, spd: 70, spe: 45},
 		abilities: {},
 		heightm: 1,
 		weightkg: 45,
@@ -1487,7 +1488,7 @@ exports.BattlePokedex = {
 		species: "Lickitung",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: {hp: 90, atk: 55, def: 75, spa: 60, spd: 60, spe: 30},
+		baseStats: {hp: 110, atk: 85, def: 85, spa: 75, spd: 75, spe: 50},
 		abilities: {},
 		heightm: 1.2,
 		weightkg: 65.5,
@@ -1673,9 +1674,9 @@ exports.BattlePokedex = {
 	mrmime: {
 		num: 122,
 		species: "Mr. Mime",
-		types: ["Psychic","Electric"],
+		types: ["Psychic", "Electric"],
 		gender: "N",
-		baseStats: {hp: 40, atk: 45, def: 65, spa: 100, spd: 110, spe: 105},
+		baseStats: {hp: 40, atk: 45, def: 65, spa: 110, spd: 110, spe: 105},
 		abilities: {},
 		heightm: 1.3,
 		weightkg: 54.5,
@@ -1804,7 +1805,7 @@ exports.BattlePokedex = {
 		species: "Ditto",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: {hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48},
+		baseStats: {hp: 108, atk: 58, def: 58, spa: 58, spd: 58, spe: 128},
 		abilities: {},
 		heightm: 0.3,
 		weightkg: 4,
@@ -1897,7 +1898,7 @@ exports.BattlePokedex = {
 		species: "Omastar",
 		types: ["Rock", "Water"],
 		gender: "N",
-		baseStats: {hp: 70, atk: 60, def: 125, spa: 115, spd: 115, spe: 55},
+		baseStats: {hp: 60, atk: 60, def: 105, spa: 100, spd: 100, spe: 55},
 		abilities: {},
 		heightm: 1,
 		weightkg: 35,
@@ -2040,7 +2041,7 @@ exports.BattlePokedex = {
 		species: "Mewtwo",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: {hp: 106, atk: 110, def: 90, spa: 154, spd: 154, spe: 130},
+		baseStats: {hp: 66, atk: 110, def: 60, spa: 144, spd: 144, spe: 90},
 		abilities: {},
 		heightm: 2,
 		weightkg: 122,
@@ -2052,7 +2053,7 @@ exports.BattlePokedex = {
 		species: "Mew",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
 		abilities: {},
 		heightm: 0.4,
 		weightkg: 4,
@@ -2060,3 +2061,5 @@ exports.BattlePokedex = {
 		eggGroups: ["Undiscovered"],
 	},
 };
+
+exports.BattlePokedex = BattlePokedex;

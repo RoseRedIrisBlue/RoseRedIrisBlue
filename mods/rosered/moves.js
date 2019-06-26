@@ -336,8 +336,8 @@ let BattleMovedex = {
 	dreameater: {
 		inherit: true,
 		category: "Physical",
-		basePower: 200,
-		drain: [1, 1],
+		basePower: 180,
+		drain: [1, 2],
 		type: "Ghost",
 		onTryHit: function (target) {
 			if (target.status !== 'psn' && target.status !== 'tox' && target.status !== 'slp') {
@@ -747,11 +747,11 @@ let BattleMovedex = {
 	},
 	rockslide: {
 		inherit: true,
-		desc: "Deals damage to a foe. Can flinch",
-		shortDesc: "Deals damage. Can flinch",
+		desc: "Deals damage to a foe.",
+		shortDesc: "Deals damage.",
 		basePower: 85,
 		accuracy: 95,
-		secondary: true,
+		secondary: false,
 		target: "normal",
 	},
 	rockthrow: {
@@ -800,18 +800,22 @@ let BattleMovedex = {
 		heal: null,
 		onHit: function (target) {
 			// Fail when health is 255 or 511 less than max
-			if (target.hp === (target.maxhp - 255) || target.hp === (target.maxhp - 511) || target.hp === target.maxhp) {
-				return false;
-			}
+			//if (target.hp === (target.maxhp - 255) || target.hp === (target.maxhp - 511) || target.hp === target.maxhp) {
+				//return false;
+			//}
 			this.heal(Math.floor(target.maxhp / 2), target, target);
 		},
 	},
 	splash: {
 		inherit: true,
-		basePower: 100,
-		accuracy: 90,
+		basePower: 60,
+		accuracy: 100,
 		category: "Physical",
 		pp: 10,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		type: "Flying",
 	},
 	sludge: {
@@ -985,7 +989,7 @@ let BattleMovedex = {
 		forceSwitch: false,
 		onTryHit: function () {},
 		priority: 0,
-		basePower: 90,
+		basePower: 80,
 		accuracy: 100,
 		category: "Physical",
 		pp: 10,
@@ -993,7 +997,7 @@ let BattleMovedex = {
 	},
 	wingattack: {
 		inherit: true,
-		basePower: 90,
+		basePower: 80,
 		pp: 10,
 	},
 	wrap: {
