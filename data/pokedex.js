@@ -1152,7 +1152,7 @@ exports.BattlePokedex = {
 		species: "Farfetch'd",
 		types: ["Grass", "Flying"],
 		gender: "N",
-		baseStats: {hp: 52, atk: 90, def: 55, spa: 78, spd: 78, spe: 69},
+		baseStats: {hp: 62, atk: 90, def: 65, spa: 78, spd: 78, spe: 69},
 		abilities: {},
 		heightm: 0.8,
 		weightkg: 15,
