@@ -121,6 +121,8 @@ let BattleMovedex = {
 	bind: {
 		inherit: true,
 		ignoreImmunity: true,
+		basePower: 30,
+		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
 			volatileStatus: 'partialtrappinglock',
@@ -182,7 +184,8 @@ let BattleMovedex = {
 	clamp: {
 		inherit: true,
 		accuracy: 75,
-		pp: 10,
+		basePower: 50,
+		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
 			volatileStatus: 'partialtrappinglock',
@@ -337,7 +340,7 @@ let BattleMovedex = {
 		inherit: true,
 		category: "Physical",
 		basePower: 180,
-		drain: [1, 2],
+		drain: [1, 1],
 		type: "Ghost",
 		onTryHit: function (target) {
 			if (target.status !== 'psn' && target.status !== 'tox' && target.status !== 'slp') {
@@ -367,7 +370,8 @@ let BattleMovedex = {
 	firespin: {
 		inherit: true,
 		accuracy: 70,
-		basePower: 15,
+		basePower: 40,
+		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
 			volatileStatus: 'partialtrappinglock',
@@ -507,6 +511,8 @@ let BattleMovedex = {
 		type: "Fighting",
 	},
 	leechlife: {
+		desc: "Drains 100% damage dealt.",
+		shortDesc: "Drains 100% damage dealt.",
 		inherit: true,
 		basePower: 60,
 		drain: [1, 1],
@@ -565,6 +571,8 @@ let BattleMovedex = {
 		type: "Psychic",
 	},
 	megadrain: {
+		desc: "Drains 100% damage dealt.",
+		shortDesc: "Drains 100% damage dealt.",
 		inherit: true,
 		drain: [1, 1],
 	},
@@ -801,21 +809,23 @@ let BattleMovedex = {
 		onHit: function (target) {
 			// Fail when health is 255 or 511 less than max
 			//if (target.hp === (target.maxhp - 255) || target.hp === (target.maxhp - 511) || target.hp === target.maxhp) {
-				//return false;
+			//	return false;
 			//}
 			this.heal(Math.floor(target.maxhp / 2), target, target);
 		},
 	},
 	splash: {
-		inherit: true,
-		basePower: 60,
-		accuracy: 100,
-		category: "Physical",
-		pp: 10,
+		desc: "30% chance to paralyze.",
+		shortDesc: "30% chance to paralyze.",
 		secondary: {
 			chance: 30,
 			status: 'par',
 		},
+		inherit: false,
+		basePower: 60,
+		accuracy: 100,
+		category: "Physical",
+		pp: 10,
 		type: "Flying",
 	},
 	sludge: {
@@ -982,9 +992,9 @@ let BattleMovedex = {
 		critRatio: 2,
 	},
 	whirlwind: {
-		inherit: true,
-		desc: "Does nothing.",
-		shortDesc: "Does nothing.",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect.",
+		inherit: false,
 		isViable: true,
 		forceSwitch: false,
 		onTryHit: function () {},
@@ -1003,6 +1013,8 @@ let BattleMovedex = {
 	wrap: {
 		inherit: true,
 		accuracy: 85,
+		basePower: 30,
+		pp: 5,
 		ignoreImmunity: true,
 		volatileStatus: 'partiallytrapped',
 		self: {

@@ -1,7 +1,6 @@
 'use strict';
 
-/**@type {{[k: string]: TemplateData}} */
-let BattlePokedex = {
+exports.BattlePokedex = {
 	missingno: {
 		num: 0,
 		species: "Missingno.",
@@ -364,7 +363,7 @@ let BattlePokedex = {
 	raichu: {
 		num: 26,
 		species: "Raichu",
-		types: ["Electric"],
+		types: ["Electric","Water"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 90, def: 55, spa: 90, spd: 90, spe: 100},
 		abilities: {},
@@ -792,7 +791,7 @@ let BattlePokedex = {
 		species: "Primeape",
 		types: ["Fighting"],
 		gender: "N",
-		baseStats: {hp: 65, atk: 105, def: 60, spa: 60, spd: 60, spe: 125},
+		baseStats: {hp: 65, atk: 105, def: 60, spa: 60, spd: 60, spe: 135},
 		abilities: {},
 		heightm: 1,
 		weightkg: 32,
@@ -1133,6 +1132,7 @@ let BattlePokedex = {
 		eggGroups: ["Mineral"],
 	},
 	magneton: {
+		inherit: true,
 		num: 82,
 		species: "Magneton",
 		types: ["Electric", "Rock"],
@@ -1392,7 +1392,7 @@ let BattlePokedex = {
 	electrode: {
 		num: 101,
 		species: "Electrode",
-		types: ["Electric"],
+		types: ["Electric", "Normal"],
 		gender: "N",
 		baseStats: {hp: 65, atk: 65, def: 70, spa: 95, spd: 95, spe: 140},
 		abilities: {},
@@ -2061,5 +2061,3 @@ let BattlePokedex = {
 		eggGroups: ["Undiscovered"],
 	},
 };
-
-exports.BattlePokedex = BattlePokedex;

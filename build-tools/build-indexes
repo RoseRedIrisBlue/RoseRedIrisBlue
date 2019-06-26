@@ -743,7 +743,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			if (pastEntry.abilities['H'] !== nowEntry.abilities['H']) {
 				overrideHiddenAbility[id] = pastEntry.abilities['H'];
 			}
-			// in the gen 3 dex, Pokemon already have the abilities that were added in gen 4
+			//in the gen 3 dex, Pokemon already have the abilities that were added in gen 4
 			const hasAbilityFromNewerGen = Dex.getTemplate(id).gen <= genNum && Dex.getAbility(pastEntry.abilities['1']).gen > genNum;
 			if ((!pastEntry.abilities['1'] && nowEntry.abilities['1']) || hasAbilityFromNewerGen) {
 				removeSecondAbility[id] = true;

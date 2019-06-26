@@ -1392,7 +1392,7 @@ exports.BattlePokedex = {
 	electrode: {
 		num: 101,
 		species: "Electrode",
-		types: ["Electric","Normal"],
+		types: ["Electric", "Normal"],
 		gender: "N",
 		baseStats: {hp: 65, atk: 65, def: 70, spa: 95, spd: 95, spe: 140},
 		abilities: {},
