@@ -8098,6 +8098,7 @@ let BattleMovedex = {
 				spd: -2,
 			},
 		},
+		secondary: false,
 		target: "normal",
 		type: "Dragon",
 		zMovePower: 160,

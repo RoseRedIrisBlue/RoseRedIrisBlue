@@ -962,6 +962,7 @@ let BattleMovedex = {
 				spd: -2,
 			},
 		},
+		secondary: false,
 	},
 	thunder: {
 		inherit: true,
