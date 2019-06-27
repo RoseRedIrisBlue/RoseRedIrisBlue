@@ -961,7 +961,7 @@ let BattleMovedex = {
 				spc: -2,
 			},
 		},
-	}
+	},
 	thunder: {
 		inherit: true,
 		desc: "Has a 10% chance to paralyze the target.",
