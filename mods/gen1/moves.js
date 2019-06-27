@@ -497,6 +497,7 @@ let BattleMovedex = {
 	},
 	jumpkick: {
 		inherit: true,
+		basePower: 90,
 		desc: "If this attack misses the target, the user 1HP of damage.",
 		shortDesc: "User takes 1 HP damage if miss.",
 		onMoveFail: function (target, source, move) {

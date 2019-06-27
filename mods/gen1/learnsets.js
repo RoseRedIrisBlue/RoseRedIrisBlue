@@ -4077,6 +4077,7 @@ exports.BattleLearnsets = {
 		whirlwind: ["1M"],
 	}},
 	dodrio: {learnset: {
+		jumpkick: ["1M"],
 		agility: ["1L51", "2L47"],
 		attract: ["2M"],
 		bide: ["1M"],

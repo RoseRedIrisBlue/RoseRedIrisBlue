@@ -8771,7 +8771,7 @@ let BattleMovedex = {
 	"jumpkick": {
 		num: 26,
 		accuracy: 95,
-		basePower: 100,
+		basePower: 90,
 		category: "Physical",
 		desc: "If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Ability Magic Guard are unaffected by crash damage.",
 		shortDesc: "User is hurt by 50% of its max HP if it misses.",
