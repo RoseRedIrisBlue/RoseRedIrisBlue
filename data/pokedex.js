@@ -308,7 +308,7 @@ exports.BattlePokedex = {
 	fearow: {
 		num: 22,
 		species: "Fearow",
-		types: ["Normal", "Flying"],
+		types: ["Ghost", "Flying"],
 		gender: "N",
 		baseStats: {hp: 65, atk: 90, def: 65, spa: 61, spd: 61, spe: 100},
 		abilities: {},
