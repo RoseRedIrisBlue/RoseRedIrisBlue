@@ -958,7 +958,8 @@ let BattleMovedex = {
 		type: "Dragon",
 		self: {
 			boosts: {
-				spc: -2,
+				spa: -2,
+				spd: -2,
 			},
 		},
 	},

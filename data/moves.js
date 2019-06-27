@@ -8094,7 +8094,8 @@ let BattleMovedex = {
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		self: {
 			boosts: {
-				spc: -2,
+				spa: -2,
+				spd: -2,
 			},
 		},
 		target: "normal",
