@@ -4168,6 +4168,7 @@ exports.BattleLearnsets = {
 		whirlpool: ["2M"],
 	}},
 	dewgong: {learnset: {
+		amnesia: ["1M"],
 		attract: ["2M"],
 		aurorabeam: ["1L1", "1L35", "2L1", "2L16"],
 		bide: ["1M"],
