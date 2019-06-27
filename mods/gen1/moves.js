@@ -946,10 +946,22 @@ let BattleMovedex = {
 	},
 	thrash: {
 		inherit: true,
-		basePower: 110,
+		basePower: 120,
 		type: "Dragon",
 		category: "Special",
 	},
+	hyperfang: {
+		inherit: true,
+		accuracy: 90,
+		basePower: 150,
+		category: "Special",
+		type: "Dragon",
+		self: {
+			boosts: {
+				spc: -2,
+			},
+		},
+	}
 	thunder: {
 		inherit: true,
 		desc: "Has a 10% chance to paralyze the target.",
