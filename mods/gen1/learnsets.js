@@ -261,6 +261,7 @@ exports.BattleLearnsets = {
 		toxic: ["1M", "2M"],
 	}},
 	charizard: {learnset: {
+		hyperfang: ["1M"],
 		attract: ["2M"],
 		bide: ["1M"],
 		bodyslam: ["1M"],
@@ -5695,6 +5696,7 @@ exports.BattleLearnsets = {
 		whirlpool: ["2M"],
 	}},
 	seadra: {learnset: {
+		hyperfang: ["1M"],
 		agility: ["1L41", "2L40"],
 		attract: ["2M"],
 		bide: ["1M"],
@@ -7230,6 +7232,7 @@ exports.BattleLearnsets = {
 		zapcannon: ["2M"],
 	}},
 	dragonite: {learnset: {
+		hyperfang: ["1M"],
 		agility: ["1L1", "1L20", "2L38"],
 		attract: ["2M"],
 		bide: ["1M"],
