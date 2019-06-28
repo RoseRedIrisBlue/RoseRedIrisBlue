@@ -1953,6 +1953,8 @@ exports.BattleLearnsets = {
 		wingattack: ["1L28", "2L27"],
 	}},
 	golbat: {learnset: {
+		poisonsting: ["1M"],
+		recover: ["1M"],
 		attract: ["2M"],
 		bide: ["1M"],
 		bite: ["1L1", "1L15", "2L12"],
@@ -2072,6 +2074,7 @@ exports.BattleLearnsets = {
 		toxic: ["1M", "2M"],
 	}},
 	vileplume: {learnset: {
+		recover: ["1M"],
 		absorb: ["2L1"],
 		acid: ["1L1"],
 		attract: ["2M"],

@@ -586,7 +586,7 @@ exports.BattlePokedex = {
 		species: "Golbat",
 		types: ["Poison", "Flying"],
 		gender: "N",
-		baseStats: {hp: 75, atk: 80, def: 70, spa: 75, spd: 75, spe: 90},
+		baseStats: {hp: 85, atk: 90, def: 80, spa: 85, spd: 85, spe: 90},
 		abilities: {},
 		heightm: 1.6,
 		weightkg: 55,

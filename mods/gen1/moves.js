@@ -637,6 +637,7 @@ let BattleMovedex = {
 		desc: "Has a 30% chance to poison the target.",
 		shortDesc: "30% chance to poison the target.",
 		basePower: 95,
+		pp: 10,
 		secondary: {
 			chance: 30,
 			status: 'psn',

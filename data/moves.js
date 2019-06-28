@@ -11944,7 +11944,7 @@ let BattleMovedex = {
 		shortDesc: "30% chance to poison the target.",
 		id: "poisonsting",
 		name: "Poison Sting",
-		pp: 35,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
