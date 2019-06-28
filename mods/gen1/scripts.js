@@ -309,7 +309,7 @@ let BattleScripts = {
 		if (move.target === 'self' && accuracy !== true) accuracy++;
 
 		// 1/256 chance of missing always, no matter what. Besides the aforementioned exceptions.
-		if (accuracy /*!*/=== true /*&& !this.randomChance(accuracy, 256)*/) {
+		if (accuracy !== true && !this.randomChance(accuracy, 256)) {
 			this.attrLastMove('[miss]');
 			this.add('-miss', pokemon);
 			damage = false;
