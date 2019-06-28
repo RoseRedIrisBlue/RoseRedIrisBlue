@@ -18691,7 +18691,7 @@ let BattleMovedex = {
 		num: 18,
 		accuracy: 100,
 		basePower: 80,
-		category: "Status",
+		category: "Physical",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect.",
 		id: "whirlwind",
