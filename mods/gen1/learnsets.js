@@ -875,7 +875,6 @@ exports.BattleLearnsets = {
 	fearow: {learnset: {
 		triattack: ["1M"],
 		hypnosis: ["1M"],
-		dreameater: ["1M"],
 		agility: ["1L43", "2L47"],
 		attract: ["2M"],
 		bide: ["1M"],
