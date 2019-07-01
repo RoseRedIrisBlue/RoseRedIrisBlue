@@ -306,7 +306,8 @@ let BattleScripts = {
 		}
 		accuracy = this.runEvent('Accuracy', target, pokemon, move, accuracy);
 		// Moves that target the user do not suffer from the 1/256 miss chance.
-		/*if (move.target === 'self' && accuracy !== true)*/ accuracy++;
+		if (move.target === 'self' && accuracy !== true) accuracy++;
+		if (move.target !== 'self' && accuracy !== true) accuracy++;
 
 		// 1/256 chance of missing always, no matter what. Besides the aforementioned exceptions.
 		if (accuracy !== true && !this.randomChance(accuracy, 256)) {
