@@ -12,6 +12,7 @@ let BattleMovedex = {
 		desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "100% chance to lower the target's Defense by 1.",
 		basePower: 70,
+		pp: 15,
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -953,6 +954,8 @@ let BattleMovedex = {
 	},
 	hyperfang: {
 		inherit: true,
+		desc: "Drops own special 2 stages.",
+		shortDesc: "Drops own special 2 stages.",
 		accuracy: 90,
 		basePower: 150,
 		category: "Special",

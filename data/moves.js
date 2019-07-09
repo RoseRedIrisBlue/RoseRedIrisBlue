@@ -96,7 +96,7 @@ let BattleMovedex = {
 		shortDesc: "100% chance to lower the foe(s) Def by 1.",
 		id: "acid",
 		name: "Acid",
-		pp: 30,
+		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
