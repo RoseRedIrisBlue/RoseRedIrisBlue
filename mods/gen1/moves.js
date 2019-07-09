@@ -786,6 +786,16 @@ let BattleMovedex = {
 		basePower: 130,
 		target: "normal",
 	},
+	sharpen: {
+		inherit: true,
+		desc: "Raises the user's Attack and Special by 1 stage.",
+		shortDesc: "Boosts the user's Attack and Special by 1.",
+		boosts: {
+			atk: 1,
+			spa: 1,
+			spd: 1,
+		},
+	},
 	skullbash: {
 		inherit: true,
 		onTry: function (attacker, defender, move) {

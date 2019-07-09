@@ -1872,7 +1872,7 @@ exports.BattlePokedex = {
 		species: "Porygon",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: {hp: 65, atk: 85, def: 70, spa: 75, spd: 75, spe: 40},
+		baseStats: {hp: 75, atk: 85, def: 80, spa: 95, spd: 95, spe: 50},
 		abilities: {},
 		heightm: 0.8,
 		weightkg: 36.5,
