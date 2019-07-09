@@ -6609,6 +6609,7 @@ exports.BattleLearnsets = {
 		zapcannon: ["2M"],
 	}},
 	porygon: {learnset: {
+		bodyslam: ["1M"],
 		agility: ["1L35", "2L9"],
 		barrier: ["2S0"],
 		bide: ["1M"],
