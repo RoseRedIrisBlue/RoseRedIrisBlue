@@ -851,6 +851,11 @@ let BattleMovedex = {
 			status: 'psn',
 		},
 	},
+	spikecannon: {
+		inherit: true,
+		basePower: 25,
+		type: "Rock",
+	},
 	struggle: {
 		inherit: true,
 		desc: "Deals Normal-type damage. If this move was successful, the user takes damage equal to 1/2 the HP lost by the target, rounded down, but not less than 1 HP. This move can only be used if none of the user's known moves can be selected.",
