@@ -1635,7 +1635,7 @@ exports.BattlePokedex = {
 		species: "Seaking",
 		types: ["Water","Normal"],
 		gender: "N",
-		baseStats: {hp: 80, atk: 102, def: 65, spa: 80, spd: 80, spe: 68},
+		baseStats: {hp: 80, atk: 102, def: 65, spa: 90, spd: 90, spe: 78},
 		abilities: {},
 		heightm: 1.3,
 		weightkg: 39,
