@@ -636,7 +636,7 @@ let BattleMovedex = {
 	pinmissile: {
 		inherit: true,
 		accuracy: 100,
-	}
+	},
 	poisonsting: {
 		inherit: true,
 		desc: "Has a 30% chance to poison the target.",
