@@ -2818,7 +2818,7 @@ let BattleMovedex = {
 	},
 	"crabhammer": {
 		num: 152,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
 		desc: "Has a higher chance for a critical hit.",
@@ -11743,7 +11743,7 @@ let BattleMovedex = {
 	},
 	"pinmissile": {
 		num: 42,
-		accuracy: 95,
+		accuracy: 100,
 		basePower: 25,
 		category: "Physical",
 		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Ability Skill Link, this move will always hit five times.",
@@ -13050,7 +13050,7 @@ let BattleMovedex = {
 	},
 	"razorleaf": {
 		num: 75,
-		accuracy: 95,
+		accuracy: 100,
 		basePower: 55,
 		category: "Physical",
 		desc: "Has a higher chance for a critical hit.",
@@ -13573,7 +13573,7 @@ let BattleMovedex = {
 	},
 	"rockslide": {
 		num: 157,
-		accuracy: 95,
+		accuracy: 100,
 		basePower: 85,
 		category: "Physical",
 		desc: "No additional effect.",
@@ -16482,7 +16482,7 @@ let BattleMovedex = {
 	},
 	"submission": {
 		num: 66,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
 		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",

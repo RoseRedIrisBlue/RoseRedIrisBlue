@@ -509,7 +509,7 @@ let BattleMovedex = {
 		inherit: true,
 		critRatio: 2,
 		basePower: 55,
-		accuracy: 95,
+		accuracy: 100,
 		type: "Fighting",
 	},
 	leechlife: {
@@ -633,6 +633,10 @@ let BattleMovedex = {
 		inherit: true,
 		basePower: 120,
 	},
+	pinmissile: {
+		inherit: true,
+		accuracy: 100,
+	}
 	poisonsting: {
 		inherit: true,
 		desc: "Has a 30% chance to poison the target.",
@@ -686,6 +690,7 @@ let BattleMovedex = {
 	},
 	razorleaf: {
 		inherit: true,
+		accuracy: 100,
 		critRatio: 2,
 		target: "normal",
 	},
@@ -761,7 +766,7 @@ let BattleMovedex = {
 		desc: "Deals damage to a foe.",
 		shortDesc: "Deals damage.",
 		basePower: 85,
-		accuracy: 95,
+		accuracy: 100,
 		secondary: false,
 		target: "normal",
 	},
@@ -959,7 +964,7 @@ let BattleMovedex = {
 	submission: {
 		inherit: true,
 		basePower: 100,
-		accuracy: 90,
+		accuracy: 100,
 	},
 	thrash: {
 		inherit: true,
