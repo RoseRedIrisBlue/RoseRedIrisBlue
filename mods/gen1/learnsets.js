@@ -5092,7 +5092,6 @@ exports.BattleLearnsets = {
 		watergun: ["1M"],
 	}},
 	hitmonlee: {learnset: {
-		hyperbeam: ["1M"],
 		attract: ["2M"],
 		bide: ["1M"],
 		bodyslam: ["1M"],
