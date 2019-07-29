@@ -2503,7 +2503,7 @@ let BattleMovedex = {
 		shortDesc: "100% chance to lower the target's Speed by 1.",
 		id: "constrict",
 		name: "Constrict",
-		pp: 35,
+		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
