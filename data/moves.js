@@ -2497,17 +2497,17 @@ let BattleMovedex = {
 	"constrict": {
 		num: 132,
 		accuracy: 100,
-		basePower: 10,
+		basePower: 85,
 		category: "Physical",
-		desc: "Has a 10% chance to lower the target's Speed by 1 stage.",
-		shortDesc: "10% chance to lower the target's Speed by 1.",
+		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "100% chance to lower the target's Speed by 1.",
 		id: "constrict",
 		name: "Constrict",
 		pp: 35,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
-			chance: 10,
+			chance: 100,
 			boosts: {
 				spe: -1,
 			},

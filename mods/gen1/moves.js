@@ -211,10 +211,11 @@ let BattleMovedex = {
 	},
 	constrict: {
 		inherit: true,
-		desc: "Has a 33% chance to lower the target's Speed by 1 stage.",
-		shortDesc: "33% chance to lower the target's Speed by 1.",
+		basePower: 85,
+		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "100% chance to lower the target's Speed by 1.",
 		secondary: {
-			chance: 33,
+			chance: 100,
 			boosts: {
 				spe: -1,
 			},
