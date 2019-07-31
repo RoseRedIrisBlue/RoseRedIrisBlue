@@ -3,8 +3,8 @@ Config.origindomain = 'play.pokemonshowdown.com';
 // address bar is `Config.origindomain`.
 Config.defaultserver = {
 	id: 'crystallize',
-	host:'roseredirisblue-crystallize.glitch.me',
-	port: 3000,
+	host:'mcmastercrystallize.herokuapp.com',
+	port: 443,
 	httpport: 8000,
 	altport: 80,
 	registered: true
