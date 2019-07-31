@@ -352,6 +352,15 @@ let BattleMovedex = {
 			}
 		},
 	},
+	ember: {
+		inherit: true,
+		desc: "Deals damage to the target with a 100% chance to burn it.",
+		shortDesc: "100% chance to burn the target.",
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+	},
 	explosion: {
 		inherit: true,
 		basePower: 170,
