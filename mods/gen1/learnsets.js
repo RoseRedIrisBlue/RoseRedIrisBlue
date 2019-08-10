@@ -7496,6 +7496,7 @@ exports.BattleLearnsets = {
 		headbutt: ["2M"],
 		hiddenpower: ["2M"],
 		hyperbeam: ["2M", "1M"],
+		hyperfang: ["2M", "1M"],
 		irontail: ["2M"],
 		lightscreen: ["2L42", "1M"],
 		protect: ["2M"],
