@@ -2060,4 +2060,16 @@ exports.BattlePokedex = {
 		color: "Pink",
 		eggGroups: ["Undiscovered"],
 	},
+	ampharos: {
+		num: 181,
+		species: "Ampharos",
+		types: ["Electric", "Dragon"],
+		gender: "N",
+		baseStats: {hp: 90, atk: 75, def: 85, spa: 115, spd: 115, spe: 55},
+		abilities: {},
+		heightm: 1.4,
+		weightkg: 61.5,
+		color: "Yellow",
+		eggGroups: ["Monster", "Field"],
+	},
 };

@@ -798,6 +798,10 @@ let BattleFormatsData = {
 		eventOnly: true,
 		tier: "OU",
 	},
+	ampharos: {
+		randomBattleMoves: ["thunderbolt", "thunderwave", "hyperfang", "firepunch"],
+		tier: "Uber",
+	},
 };
 
 exports.BattleFormatsData = BattleFormatsData;
