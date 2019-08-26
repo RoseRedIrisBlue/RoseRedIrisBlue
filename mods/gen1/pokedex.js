@@ -2072,4 +2072,15 @@ exports.BattlePokedex = {
 		color: "Yellow",
 		eggGroups: ["Monster", "Field"],
 	},
+	forretress: {
+		num: 205,
+		species: "Forretress",
+		types: ["Bug", "Rock"],
+		baseStats: {hp: 75, atk: 90, def: 140, spa: 60, spd: 60, spe: 40},
+		abilities: {},
+		heightm: 1.2,
+		weightkg: 125.8,
+		color: "Purple",
+		eggGroups: ["Bug"],
+	},
 };
