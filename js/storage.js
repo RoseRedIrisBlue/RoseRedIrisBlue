@@ -2,10 +2,10 @@ Config.origindomain = 'play.pokemonshowdown.com';
 // `defaultserver` specifies the server to use when the domain name in the
 // address bar is `Config.origindomain`.
 Config.defaultserver = {
-	id: 'crystallize',
-	host:'mcmastercrystallize.herokuapp.com',
+	id: 'dragonheaven',
+	host:'scoopapa-dh.glitch.me',
 	port: 443,
-	httpport: 8000,
+	httpport: 8050,
 	altport: 80,
 	registered: true
 };
