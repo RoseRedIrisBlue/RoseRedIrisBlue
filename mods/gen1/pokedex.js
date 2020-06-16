@@ -2087,7 +2087,7 @@ exports.BattlePokedex = {
 		num: 335,
 		species: "Zangoose",
 		types: ["Normal", "Fighting"],
-		baseStats: {hp: 73, atk: 115, def: 60, spa: 60, spd: 60, spe: 90},
+		baseStats: {hp: 73, atk: 115, def: 60, spa: 60, spd: 60, spe: 80},
 		abilities: {},
 		heightm: 1.3,
 		weightkg: 40.3,
