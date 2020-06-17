@@ -7602,6 +7602,7 @@ exports.BattleLearnsets = {
 		bind: ["1M"],
 		bite: ["1M"],
 		bodyslam: ["1M"],
+		constrict: ["1M"],
 		doubleedge: ["1M"],
 		earthquake: ["1M"],
 		fireblast: ["1M"],
