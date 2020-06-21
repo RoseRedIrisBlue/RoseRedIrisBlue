@@ -803,11 +803,11 @@ let BattleFormatsData = {
 		tier: "Uber",
 	},
 	forretress: {
-		randomBattleMoves: ["pinmissile", "rockslide", "explosion", "megadrain"],
+		randomBattleMoves: ["leechlife", "rockslide", "explosion", "megadrain"],
 		tier: "Uber",
 	},
 	zangoose: {
-		randomBattleMoves: ["slash","karatechop","thunderwave","seismictoss"],
+		randomBattleMoves: ["slash","submission","thunderwave","seismictoss"],
 		tier: "Uber",
 	},
 	seviper: {
