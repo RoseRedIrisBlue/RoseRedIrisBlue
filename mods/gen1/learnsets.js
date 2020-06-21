@@ -7565,7 +7565,6 @@ exports.BattleLearnsets = {
 		toxic: ["1M","2M"],
 	}},
 	zangoose: {learnset: {
-		agility: ["1M"],
 		blizzard: ["1M"],
 		bodyslam: ["1M"],
 		counter: ["1M"],
