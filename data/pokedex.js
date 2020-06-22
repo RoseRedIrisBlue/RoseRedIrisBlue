@@ -683,7 +683,7 @@ exports.BattlePokedex = {
 		species: "Venomoth",
 		types: ["Bug", "Poison"],
 		gender: "N",
-		baseStats: {hp: 70, atk: 90, def: 60, spa: 90, spd: 90, spe: 95},
+		baseStats: {hp: 70, atk: 75, def: 60, spa: 90, spd: 90, spe: 95},
 		abilities: {},
 		heightm: 1.5,
 		weightkg: 12.5,
