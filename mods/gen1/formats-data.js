@@ -814,6 +814,18 @@ let BattleFormatsData = {
 		randomBattleMoves: ["swordsdance","glare","poisonsting","earthquake"],
 		tier: "Uber",
 	},
+	gogoat: {
+		randomBattleMoves: ["razorleaf","earthquake","rockslide","bodyslam"],
+		tier: "Uber",
+	},
+	sceptile: {
+		randomBattleMoves: ["razorleaf","swordsdance","hyperbeam","earthquake"],
+		tier: "Uber",
+	},
+	breloom: {
+		randomBattleMoves: ["sleeppowder","swordsdance","submission","rockslide"],
+		tier: "Uber",
+	},
 };
 
 exports.BattleFormatsData = BattleFormatsData;
