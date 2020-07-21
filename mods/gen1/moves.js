@@ -345,11 +345,8 @@ let BattleMovedex = {
 		basePower: 180,
 		drain: [1, 1],
 		type: "Ghost",
-		onTryHit: function (target) {
-			if (target.status !== 'psn' && target.status !== 'tox' && target.status !== 'slp') {
-				this.add('-immune', target, '[msg]');
-				return null;
-			}
+		onTryImmunity(target) {
+			return target.status === 'slp' || target.status === 'psn' || target.status === 'tox';
 		},
 	},
 	ember: {
@@ -1026,6 +1023,10 @@ let BattleMovedex = {
 		inherit: true,
 		accuracy: 100,
 	},
+	transform: {
+		inherit: true,
+		desc: "The user transforms into the target. The target's current stats, stat stages, types, moves, DVs, species, and sprite are copied. The user's level and HP remain the same and each copied move receives only 5 PP. This move can hit a target using Dig or Fly.",
+	},
 	triattack: {
 		inherit: true,
 		onHit: function () {},
@@ -1036,7 +1037,7 @@ let BattleMovedex = {
 		inherit: true,
 		basePower: 40,
 	},
-	vicegrip: {
+	visegrip: {
 		inherit: true,
 		type: "Bug",
 		critRatio: 2,
