@@ -122,7 +122,8 @@ let BattleMovedex = {
 	bind: {
 		inherit: true,
 		ignoreImmunity: true,
-		basePower: 30,
+		basePower: 35,
+		accuracy: 85,
 		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
@@ -145,6 +146,7 @@ let BattleMovedex = {
 				}
 			}
 		},
+		type: "Bug",
 	},
 	bite: {
 		inherit: true,
@@ -184,8 +186,8 @@ let BattleMovedex = {
 	},
 	clamp: {
 		inherit: true,
-		accuracy: 75,
-		basePower: 50,
+		accuracy: 85,
+		basePower: 35,
 		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
@@ -234,17 +236,19 @@ let BattleMovedex = {
 	},
 	counter: {
 		inherit: true,
+		desc: "Deals damage to the opposing Pokemon equal to twice the damage dealt by the last move used in the battle. This move ignores type immunity. Fails if the user moves first, or if the opposing side's last move was Counter, had 0 power, or was not Normal or Fighting type. Fails if the last move used by either side did 0 damage and was not Confuse Ray, Conversion, Focus Energy, Glare, Haze, Leech Seed, Light Screen, Mimic, Mist, Poison Gas, Poison Powder, Recover, Reflect, Rest, Soft-Boiled, Splash, Stun Spore, Substitute, Supersonic, Teleport, Thunder Wave, Toxic, or Transform.",
 		ignoreImmunity: true,
 		willCrit: false,
-		damageCallback: function (pokemon, target) {
+		damageCallback(pokemon, target) {
 			// Counter mechanics on gen 1 might be hard to understand.
 			// It will fail if the last move selected by the opponent has base power 0 or is not Normal or Fighting Type.
 			// If both are true, counter will deal twice the last damage dealt in battle, no matter what was the move.
 			// That means that, if opponent switches, counter will use last counter damage * 2.
-			let lastUsedMove = target.side.lastMove && this.getMove(target.side.lastMove.id);
-			if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.willMove(target)) {
+			let lastUsedMove = target.side.lastMove && this.dex.getMove(target.side.lastMove.id);
+			if (lastUsedMove && lastUsedMove.basePower > 0 && ['Normal', 'Fighting'].includes(lastUsedMove.type) && this.lastDamage > 0 && !this.queue.willMove(target)) {
 				return 2 * this.lastDamage;
 			}
+			this.debug("Gen 1 Counter failed due to conditions not met");
 			this.add('-fail', pokemon);
 			return false;
 		},
@@ -277,49 +281,39 @@ let BattleMovedex = {
 		},
 	},
 	disable: {
-		//inherit: true,
-		accuracy: 100,
-		category: "Status",
-		id: "disable",
-		isViable: true,
-		name: "Disable",
-		pp: 1.875,
-		noPPBoosts: true,
-		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
-		onHit: function (target, source) {
-			if (!target.moves.length) return false;
-			let sideCondition = target.side.sideConditions['disable'];
-			if (sideCondition) {
-				target.side.removeSideCondition('disable');
-			}
-			target.side.addSideCondition('disable', target);
-		},
+		inherit: true,
+		desc: "For 0 to 7 turns, one of the target's known moves that has at least 1 PP remaining becomes disabled, at random. Fails if one of the target's moves is already disabled, or if none of the target's moves have PP remaining. If any Pokemon uses Haze, this effect ends. Whether or not this move was successful, it counts as a hit for the purposes of the opponent's use of Rage.",
+		shortDesc: "For 0-7 turns, disables one of the target's moves.",
 		effect: {
-			noCopy: true, // doesn't get copied by Baton Pass
-			onStart: function (side, target) {
-				let moves = target.moves;
-				let moveId = moves[this.random(moves.length)];
-				if (!moveId) return false;
-				let move = this.getMove(moveId);
-				this.add('-start', target, 'Disable', move.name);
+			duration: 4,
+			durationCallback(target, source, effect) {
+				let duration = this.random(1, 7);
+				return duration;
+			},
+			onStart(pokemon) {
+				if (!this.queue.willMove(pokemon)) {
+					this.effectData.duration++;
+				}
+				let moves = pokemon.moves;
+				let move = this.dex.getMove(this.sample(moves));
+				this.add('-start', pokemon, 'Disable', move.name);
 				this.effectData.move = move.id;
 				return;
 			},
-			onBeforeMovePriority: 7,
-			onBeforeMove: function (attacker, defender, move) {
-				if (this.effectData.source !== attacker) return;
+			onResidualOrder: 14,
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Disable');
+			},
+			onBeforeMove(attacker, defender, move) {
 				if (move.id === this.effectData.move) {
 					this.add('cant', attacker, 'Disable', move);
 					return false;
 				}
 			},
-			onDisableMove: function (pokemon) {
-				if (this.effectData.source !== pokemon) return;
-				let moves = pokemon.moveset;
-				for (let i = 0; i < moves.length; i++) {
-					if (moves[i].id === this.effectData.move) {
-						pokemon.disableMove(moves[i].id);
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					if (moveSlot.id === this.effectData.move) {
+						pokemon.disableMove(moveSlot.id);
 					}
 				}
 			},
@@ -374,12 +368,15 @@ let BattleMovedex = {
 	},
 	firepunch: {
 		inherit: true,
-		basePower: 95,
+		desc: "10% chance to burn. 25% recoil."
+		shortDesc: "10% chance to burn. 25% recoil."
+		basePower: 120,
+		recoil: [1, 4],
 	},
 	firespin: {
 		inherit: true,
-		accuracy: 70,
-		basePower: 40,
+		accuracy: 85,
+		basePower: 35,
 		pp: 5,
 		volatileStatus: 'partiallytrapped',
 		self: {
@@ -502,7 +499,10 @@ let BattleMovedex = {
 	},
 	icepunch: {
 		inherit: true,
-		basePower: 95,
+		desc: "10% chance to freeze. 25% recoil."
+		shortDesc: "10% chance to freeze. 25% recoil."
+		basePower: 120,
+		recoil: [1, 4],
 	},
 	jumpkick: {
 		inherit: true,
@@ -595,28 +595,25 @@ let BattleMovedex = {
 	},
 	mimic: {
 		inherit: true,
-		desc: "This move is replaced by a random move on target's moveset. The copied move has the maximum PP for that move. Ignores a target's Substitute.",
-		shortDesc: "A random target's move replaces this one.",
-		onHit: function (target, source) {
+		desc: "While the user remains active, this move is replaced by a random move known by the target, even if the user already knows that move. The copied move keeps the remaining PP for this move, regardless of the copied move's maximum PP. Whenever one PP is used for a copied move, one PP is used for this move.",
+		shortDesc: "Random move known by the target replaces this.",
+		onHit(target, source) {
 			let moveslot = source.moves.indexOf('mimic');
 			if (moveslot < 0) return false;
 			let moves = target.moves;
-			let move = moves[this.random(moves.length)];
-			if (!move) return false;
-			move = this.getMove(move);
-			let mimicMove = {
+			let moveid = this.sample(moves);
+			if (!moveid) return false;
+			let move = this.dex.getMove(moveid);
+			source.moveSlots[moveslot] = {
 				move: move.name,
 				id: move.id,
-				pp: source.moveset[moveslot].pp,
+				pp: source.moveSlots[moveslot].pp,
 				maxpp: move.pp * 8 / 5,
 				target: move.target,
 				disabled: false,
 				used: false,
 				virtual: true,
 			};
-			source.moveset[moveslot] = mimicMove;
-			source.baseMoveset[moveslot] = mimicMove;
-			source.moves[moveslot] = toId(move.name);
 			this.add('-start', source, 'Mimic', move.name);
 		},
 	},
@@ -703,8 +700,17 @@ let BattleMovedex = {
 		target: "normal",
 	},
 	razorwind: {
-		inherit: true,
-		critRatio: 1,
+		id: "razorwind",
+		name: "Razor Wind",
+		desc: "High critical rate.",
+		shortDesc: "High crit rate.",
+		inherit: false,
+		basePower: 45,
+		accuracy: 100,
+		category: "Physical",
+		pp: 10,
+		type: "Flying",
+		critRatio: 2,
 		target: "normal",
 	},
 	recover: {
@@ -841,6 +847,8 @@ let BattleMovedex = {
 		},
 	},
 	splash: {
+		id: "splash",
+		name: "Splash",
 		desc: "30% chance to paralyze.",
 		shortDesc: "30% chance to paralyze.",
 		secondary: {
@@ -1007,7 +1015,17 @@ let BattleMovedex = {
 	},
 	thunderpunch: {
 		inherit: true,
-		basePower: 95,
+		desc: "10% chance to paralyze. 25% recoil."
+		shortDesc: "10% chance to paralyze. 25% recoil."
+		basePower: 120,
+		recoil: [1, 4],
+	},
+	thundershock: {
+		inherit: true,
+		desc: "10% paralysis chance. High critical rate.",
+		shortDesc: "10% paralysis chance. High crit rate.",
+		basePower: 55,
+		critRatio: 2,
 	},
 	thunderwave: {
 		inherit: true,
@@ -1045,15 +1063,17 @@ let BattleMovedex = {
 	whirlwind: {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect.",
+		id: "whirlwind",
+		name: "Whirlwind",
 		inherit: false,
 		isViable: true,
 		forceSwitch: false,
 		onTryHit: function () {},
 		priority: 0,
-		basePower: 80,
-		accuracy: 100,
+		basePower: 110,
+		accuracy: 85,
 		category: "Physical",
-		pp: 10,
+		pp: 5,
 		type: "Flying",
 	},
 	wingattack: {
@@ -1064,7 +1084,7 @@ let BattleMovedex = {
 	wrap: {
 		inherit: true,
 		accuracy: 85,
-		basePower: 30,
+		basePower: 35,
 		pp: 5,
 		ignoreImmunity: true,
 		volatileStatus: 'partiallytrapped',

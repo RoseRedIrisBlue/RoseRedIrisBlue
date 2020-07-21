@@ -1322,8 +1322,8 @@ let BattleMovedex = {
 	},
 	"bind": {
 		num: 20,
-		accuracy: 75,
-		basePower: 30,
+		accuracy: 85,
+		basePower: 35,
 		category: "Physical",
 		desc: "Prevents the target from switching for two or three turns; seven turns if the user is holding Grip Claw. Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute. This effect is not stackable or reset by using this or another partial-trapping move.",
 		shortDesc: "Traps and damages the target for 4-5 turns.",
@@ -1335,7 +1335,7 @@ let BattleMovedex = {
 		volatileStatus: 'partiallytrapped',
 		secondary: false,
 		target: "normal",
-		type: "Normal",
+		type: "Bug",
 		zMovePower: 100,
 		contestType: "Tough",
 	},
@@ -2274,8 +2274,8 @@ let BattleMovedex = {
 	},
 	"clamp": {
 		num: 128,
-		accuracy: 75,
-		basePower: 50,
+		accuracy: 85,
+		basePower: 35,
 		category: "Physical",
 		desc: "Prevents the target from switching for two or three turns; seven turns if the user is holding Grip Claw. Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute. This effect is not stackable or reset by using this or another partial-trapping move.",
 		shortDesc: "Traps and damages the target for 2-3 turns.",
@@ -5108,10 +5108,10 @@ let BattleMovedex = {
 	"firepunch": {
 		num: 7,
 		accuracy: 100,
-		basePower: 95,
+		basePower: 120,
 		category: "Physical",
-		desc: "Has a 10% chance to burn the target.",
-		shortDesc: "10% chance to burn the target.",
+		desc: "Has a 10% chance to burn the target. 1/4 recoil",
+		shortDesc: "10% chance to burn the target. 1/4 recoil",
 		id: "firepunch",
 		isViable: true,
 		name: "Fire Punch",
@@ -5122,6 +5122,7 @@ let BattleMovedex = {
 			chance: 10,
 			status: 'brn',
 		},
+		recoil: [1, 4],
 		target: "normal",
 		type: "Fire",
 		zMovePower: 140,
@@ -5129,8 +5130,8 @@ let BattleMovedex = {
 	},
 	"firespin": {
 		num: 83,
-		accuracy: 70,
-		basePower: 40,
+		accuracy: 85,
+		basePower: 35,
 		category: "Special",
 		desc: "Prevents the target from switching for two or three turns; seven turns if the user is holding Grip Claw. Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute. This effect is not stackable or reset by using this or another partial-trapping move.",
 		shortDesc: "Traps and damages the target for 4-5 turns.",
@@ -8356,10 +8357,10 @@ let BattleMovedex = {
 	"icepunch": {
 		num: 8,
 		accuracy: 100,
-		basePower: 95,
+		basePower: 120,
 		category: "Physical",
-		desc: "Has a 10% chance to freeze the target.",
-		shortDesc: "10% chance to freeze the target.",
+		desc: "Has a 10% chance to freeze the target. 1/4 recoil",
+		shortDesc: "10% chance to freeze the target. 1/4 recoil",
 		id: "icepunch",
 		isViable: true,
 		name: "Ice Punch",
@@ -8370,6 +8371,7 @@ let BattleMovedex = {
 			chance: 10,
 			status: 'frz',
 		},
+		recoil: [1, 4],
 		target: "normal",
 		type: "Ice",
 		zMovePower: 140,
@@ -13094,37 +13096,19 @@ let BattleMovedex = {
 	"razorwind": {
 		num: 13,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 45,
 		category: "Special",
-		desc: "Has a higher chance for a critical hit. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Charges, then hits foe(s) turn 2. High crit ratio.",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High crit ratio.",
 		id: "razorwind",
 		name: "Razor Wind",
 		pp: 10,
 		priority: 0,
 		flags: {charge: 1, protect: 1, mirror: 1},
-		onTry: function (attacker, defender, move) {
-			if (attacker.volatiles['twoturnmove']) {
-				if (attacker.volatiles['twoturnmove'].duration === 2) return null;
-				attacker.removeVolatile(move.id);
-				return;
-			}
-			this.add('-prepare', attacker, move.name, defender);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				this.add('-anim', attacker, move.name, defender);
-				if (move.spreadHit) {
-					attacker.addVolatile('twoturnmove', defender);
-					attacker.volatiles['twoturnmove'].duration = 1;
-				}
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		},
 		critRatio: 2,
 		secondary: false,
 		target: "allAdjacentFoes",
-		type: "Normal",
+		type: "Flying",
 		zMovePower: 160,
 		contestType: "Cool",
 	},
@@ -17546,10 +17530,10 @@ let BattleMovedex = {
 	"thunderpunch": {
 		num: 9,
 		accuracy: 100,
-		basePower: 95,
+		basePower: 120,
 		category: "Physical",
-		desc: "Has a 10% chance to paralyze the target.",
-		shortDesc: "10% chance to paralyze the target.",
+		desc: "Has a 10% chance to paralyze the target. 1/4 recoil",
+		shortDesc: "10% chance to paralyze the target. 1/4 recoil",
 		id: "thunderpunch",
 		isViable: true,
 		name: "Thunder Punch",
@@ -17560,6 +17544,7 @@ let BattleMovedex = {
 			chance: 10,
 			status: 'par',
 		},
+		recoil: [1, 4],
 		target: "normal",
 		type: "Electric",
 		zMovePower: 140,
@@ -17568,13 +17553,14 @@ let BattleMovedex = {
 	"thundershock": {
 		num: 84,
 		accuracy: 100,
-		basePower: 40,
+		basePower: 55,
 		category: "Special",
-		desc: "Has a 10% chance to paralyze the target.",
-		shortDesc: "10% chance to paralyze the target.",
+		desc: "Has a 10% chance to paralyze the target. High crit rate.",
+		shortDesc: "10% chance to paralyze the target. High crit rate.",
 		id: "thundershock",
 		name: "Thunder Shock",
 		pp: 30,
+		critRatio: 2,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
@@ -18691,15 +18677,15 @@ let BattleMovedex = {
 	},
 	"whirlwind": {
 		num: 18,
-		accuracy: 100,
-		basePower: 80,
+		accuracy: 85,
+		basePower: 110,
 		category: "Physical",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect.",
 		id: "whirlwind",
 		isViable: true,
 		name: "Whirlwind",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {reflectable: 1, mirror: 1, authentic: 1, mystery: 1},
 		forceSwitch: false,
@@ -18995,7 +18981,7 @@ let BattleMovedex = {
 	"wrap": {
 		num: 35,
 		accuracy: 85,
-		basePower: 30,
+		basePower: 35,
 		category: "Physical",
 		desc: "Prevents the target from switching for two or three turns; seven turns if the user is holding Grip Claw. Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute. This effect is not stackable or reset by using this or another partial-trapping move.",
 		shortDesc: "Traps and damages the target for 4-5 turns.",
