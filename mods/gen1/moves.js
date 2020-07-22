@@ -255,7 +255,7 @@ let BattleMovedex = {
 	},
 	crabhammer: {
 		inherit: true,
-		accuracy: 90,
+		accuracy: 100,
 		critRatio: 2,
 	},
 	dig: {
