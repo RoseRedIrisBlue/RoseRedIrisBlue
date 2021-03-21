@@ -12,7 +12,7 @@ Config.origindomain = 'play.pokemonshowdown.com';
 
 Config.defaultserver = {
 	id: 'rby',
-	host:'3.21.90.166',
+	host:'50.116.24.100',
 	port: 18000,
 	httpport: 18000,
 	altport: 80,
